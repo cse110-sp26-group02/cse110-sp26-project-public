@@ -10,7 +10,6 @@ Home of our team's project along with its:
 * test code
 * CI/CD pipelines
 * manually-curated guidelines & auto-generated documentation for developers
-* product releases (both "official" and "dev" variants - using GitHub Releases and the repo itself)
 * release reports (for developers)
 
 ---
