@@ -7,7 +7,7 @@ export default defineConfig({
     [
       'html',
       {
-        outputFolder: 'out/reports/playwright',
+        outputFolder: 'out/playwright',
         open: 'never'
       }
     ],
