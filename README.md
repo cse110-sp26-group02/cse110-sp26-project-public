@@ -38,7 +38,12 @@ Home of our team's project along with its:
 
 ## Devs 
 
+See the following instructions for the latest news!
+
+### Reminders
+
 Remember that we need to talk about the accidental push to main and establishing branch protections. We need everyone to attend meeting this time! Not just 3 members! 
 
 * whoever has time, please review the latest meeting plans on our official doc site [https://github.com/cse110-sp26-group02/cse110-sp26-group02](https://github.com/cse110-sp26-group02/cse110-sp26-group02)
 * let the leads know in Slack if you have time ASAP! we need to have an emergency meeting again on Friday!
+* please let us know of any ideas for how to repair our build pipeline! both leads have tried re-build and no output is generated anymore!!! we cannot move on without fixing that first!
