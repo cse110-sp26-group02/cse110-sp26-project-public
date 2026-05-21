@@ -1,4 +1,4 @@
-# CSE 110 — Public Project Repository (Temporarily Private)
+# CSE 110 — Public Project Repository
 
 ---
 
