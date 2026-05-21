@@ -1,0 +1,77 @@
+# CSE 110 — Public Project Repository (Temporarily Private)
+
+---
+
+## Overview
+
+Home of our team's project along with its:
+
+* source code
+* test code
+* CI/CD pipelines
+* manually-curated developer guidelines
+* auto-generated developer documentation
+* product releases (both "official" and "dev" variants - using GitHub Releases and the repo itself)
+* release reports (for developers)
+
+---
+
+## Users 
+
+Check out the documentation at [https://cse110-sp26-group02.github.io/cse110-sp26-project-site/](https://cse110-sp26-group02.github.io/cse110-sp26-project-site/). Make sure you check the compatability and "Requirements" page before installing. If you decide to install, follow the steps below or those listed in the "Quickstart" tab on the site.
+
+### Quickstart
+
+* If you are a returning user:
+    1. Please visit the official documentation site for personalized steps.
+* If you are a brand new user:
+    1. Click on the `out/` folder.
+    2. Click on the `release/` folder inside.
+    3. Open the `.vsix` file.
+    4. Click the "download file" button on that page.
+    5. Once downloaded, keep note of the path where it was downloaded onto your machine and open VS Code.
+    6. In VS Code, find and click the "Extensions" icon on the left "Activity Bar".
+    7. Click the 3-dotted line button in the top right of the "sidebar".
+    8. Select "Install from VSIX...".
+    9. An extension icon should have appeared in the "Activity Bar". Click on it.
+    10. If you see "AIT" written in the top left corner of the new interface in the "Sidebar", you have access!
+    11. Check out the "Configuration" and "Usage" tabs of our site to setup and use our product! Enjoy!
+
+---
+
+## Project-Contributing Developers 
+
+### Get Started
+
+#### Locations
+
+* See `STRUCTURE.md` for a map of the repo (yes, unlike the `-private` repo, this is the main onboarding step for everyone).
+
+#### Live Testing
+
+* Want to test only the latest release? Just follow the user's QuickStart steps above.
+* Want to test a developer release? Go into GitHub Releases (right side of the repo's GitHub UI), scroll inside, and select a release with version ending in `-dev`.
+
+### Tips
+
+#### General
+
+* Ensure that you and your assistant LLM follow the guidance in `dev/manual/`.
+* Want to see the commits sorted for you? See the `CHANGELOG.md`.
+
+#### Generated Documentation
+
+To use the auto-generated documentation site, clone or fetch/pull the repo (depending on if you have it cloned yet or not) and run the following commands from the root directory of the repo where it is stored on your machine (e.g. `user/downloads/project/` (make sure your current shell session has NVM activated before - running something like `\."#HOME/.nvm/nvm.sh` to activate manually):
+
+```bash
+npm install
+npm run docs:static
+```
+
+Afterwards, you can navigate to `http://127.0.0.1:4173` on your preferred browser to see the documentation as you work (likely as a split-window). 
+
+Note that: 
+
+* Chromium browsers are recommended for the most stable experience
+* use a "private" window to not face problems with caching when trying to open a newer variant of the site
+* the documentation is only available locally to preserve the privacy of our development process as we compete with other strong teams

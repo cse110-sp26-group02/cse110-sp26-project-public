@@ -1,0 +1,73 @@
+name: 
+
+  main-pipeline
+
+on:
+
+  pull_request:
+    paths-ignore:
+      - ".github/ISSUE_TEMPLATE"
+      - "out/**"
+      - "dev/manual"
+      - "CHANGELOG.md"
+      - "STRUCTURE.md"
+      - "README.md"
+  push:
+    branches:
+      - '*'
+    tags:
+      - "*-dev"
+      - "*-official"
+    paths-ignore:
+      - ".github/ISSUE_TEMPLATE"
+      - "out/**"
+      - "dev/manual"
+      - "CHANGELOG.md"
+      - "STRUCTURE.md"
+      - "README.md"
+    
+jobs:
+
+  lint:
+    name: lint (src and tests)
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: install dependencies
+        run: npm install
+
+      - name: run lint
+        run: npm run lint --if-present
+
+  build:
+    if: github.actor != 'github-actions[bot]'
+    name: extra
+    runs-on: ubuntu-latest
+    needs: lint
+    permissions:
+      contents: write
+    steps:
+
+      - name: upload developer release assets (with clobber)
+        if: github.ref_type == 'tag' && endsWith(github.ref_name, '-dev')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release upload "$GITHUB_REF_NAME" out/*.vsix --clobber
+
+      - name: upload official release assets (without clobber)
+        if: github.ref_type == 'tag' && endsWith(github.ref_name, '-official')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release upload "$GITHUB_REF_NAME" out/*.vsix 

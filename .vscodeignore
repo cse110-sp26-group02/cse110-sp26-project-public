@@ -1,0 +1,7 @@
+.github/**
+tests/**
+.vscode-test.js
+playwright.config.js
+jest.config.js
+out/**
+node_modules/**

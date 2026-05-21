@@ -1,0 +1,91 @@
+{
+  "name": "cse110-sp26-project",
+  "displayName": "AIT",
+  "version": "0.0.0",
+  "description": "CSE 110 Spring 2026 Team Project",
+  "publisher": "team-02",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cse110-sp26-group02/cse110-sp26-project-public.git"
+  },
+  "type": "module",
+  
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+
+    "package": "vsce package",
+    
+    "test": "npm run test:all",
+    "test:all": "npm run test:unit && npm run test:vscode && npm run test:e2e",
+            
+    "test:vscode": "vscode-test --config .vscode-test.mjs"
+  },
+  
+  "devDependencies": {
+    "globals": "^15.0.0",
+    
+    "eslint": "^9.0.0",
+    "@eslint/js": "^9.0.0",
+    "eslint-plugin-jsdoc": "^50.0.0",
+    
+    "jsdoc": "^4.0.0",
+    
+    "jest": "^29.7.0",
+    
+    "@playwright/test": "^1.44.0",
+    
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    
+    "@vscode/vsce": "^3.0.0"
+  },
+  
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  
+  "categories": [
+    "Other"
+  ],
+  
+  "activationEvents": [
+    "onView:aitSidebarView",
+    
+    "onCommand:ait.launchUI",
+    "onCommand:ait.ping"
+  ],
+  
+  "main": "./src/vscode/extension.js",
+  
+  "contributes": {
+    "commands": [
+      {
+        "command": "ait.launchUI",
+        "title": "AIT: Open Sidebar"
+      },
+      {
+        "command": "ait.ping",
+        "title": "AIT: Ping"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "aitActivitybarViewContainer",
+          "title": "AIT",
+          "icon": "src/media/temp-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "aitActivitybarViewContainer": [
+        {
+          "id": "aitView",
+          "name": "Agentic Issue Tracker",
+          "type": "webview"
+        }
+      ]
+    }
+  }
+}
