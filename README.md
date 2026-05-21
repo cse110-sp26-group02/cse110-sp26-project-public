@@ -33,3 +33,12 @@ Home of our team's project along with its:
     9. An extension icon should have appeared in the "Activity Bar". Click on it.
     10. If you see "AIT" written in the top left corner of the new interface in the "Sidebar", you have access!
     11. Check out the "Configuration" and "Usage" tabs of our site to setup and use our product! Enjoy!
+ 
+---
+
+## Devs 
+
+Remember that we need to talk about the accidental push to main and establishing branch protections. We need everyone to attend meeting this time! Not just 3 members! 
+
+* whoever has time, please review the latest meeting plans on our official doc site [https://github.com/cse110-sp26-group02/cse110-sp26-group02](https://github.com/cse110-sp26-group02/cse110-sp26-group02)
+* let the leads know in Slack if you have time ASAP! we need to have an emergency meeting again on Friday!
