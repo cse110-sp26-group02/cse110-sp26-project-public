@@ -6,11 +6,8 @@
 
 Home of our team's project along with its:
 
-* source code
-* test code
+* source & test code
 * CI/CD pipelines
-* manually-curated guidelines & auto-generated documentation for developers
-* release reports (for developers)
 
 ---
 
