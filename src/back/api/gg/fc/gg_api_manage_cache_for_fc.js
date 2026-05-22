@@ -1,3 +1,6 @@
+// LEAD: GUYS STOP USING A DIFFERENT LLM! THE FOLLOWING DOES NOT CONNECT TO EXISTING ENDPOINTS OR FILES!
+
+// imports
 import {
     buildGeminiLocalValidationError,
     createGeminiRequestConfig,
